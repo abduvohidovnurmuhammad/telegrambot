@@ -5,7 +5,7 @@ TOKEN = "8133175969:AAEyFLseZkNofcEOSrA9CGP1eOMw0WylmpA"
 bot = telebot.TeleBot(TOKEN)
 
 # Faqat public kanal tekshiriladi
-PUBLIC_CHANNEL = "@sahfabooks"
+PUBLIC_CHANNEL = "@sahfa_books"
 
 WELCOME_TEXT = (
     "Assalomu alaykum!\n\n"
@@ -43,7 +43,7 @@ def start(msg):
         markup.add(
             telebot.types.InlineKeyboardButton(
                 "2️⃣ Public kanalga obuna bo‘lish",
-                url="https://t.me/sahfabooks"
+                url="https://t.me/sahfa_books"
             )
         )
 
@@ -64,7 +64,14 @@ def callback_check(call):
 
     if check_sub(user_id):
         bot.edit_message_text(
-            "🎉 Tasdiqlandi! Endi botdan foydalanishingiz mumkin.",
+            "🎉 Tabriklaymiz!\n\n"
+        "Siz barcha shartlarni muvaffaqiyatli bajardingiz va "
+        "Asmo Box × Sahfa Books tomonidan maxsus PROMOKOD sohibiga aylandingiz!\n\n"
+        "🎁 Promokod: 134B7-ASMO10\n\n"
+        "Bu promokod orqali keyingi xaridingizda maxsus chegirmadan foydalanishingiz mumkin.\n\n"
+        "👉 Promokoddan foydalanish uchun quyidagi havola orqali o‘ting:\n"
+        "🔗 https://uzum.uz/ru/product/bloknot-moya-kaaba-1917547?skuId=6749819\n\n"
+        "🛍 Xaridingiz uchun rahmat! Sizni yana mamnun qilishdan xursandmiz 💙",
             chat_id=call.message.chat.id,
             message_id=call.message.message_id
         )
